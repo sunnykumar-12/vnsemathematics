@@ -23,17 +23,21 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       font-weight: 600;
+      margin-bottom: 20px;
+      text-align: center;
     }
 
     .button {
+      display: inline-block;
       background-color: #ff9800;
       border: none;
-      padding: 10px 20px;
+      padding: 12px 25px;
       border-radius: 5px;
       color: white;
-      font-size: 16px;
+      font-size: 18px;
       cursor: pointer;
-      margin-top: 20px;
+      text-decoration: none;
+      text-align: center;
     }
 
     .button:hover {
@@ -55,7 +59,9 @@
 
 <body>
   <div class="logo">VNSE MATHEMATICS</div>
-  <button class="button" onclick="window.location.href='https://www.youtube.com'">Go to YouTube</button>
+
+  <!-- Button code -->
+  <a href="https://www.youtube.com" class="button" target="_blank">Go to YouTube</a>
 
   <footer>© 2025 VNSE MATHEMATICS. All rights reserved.</footer>
 </body>
