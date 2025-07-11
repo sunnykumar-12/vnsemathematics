@@ -46,13 +46,15 @@
 <body>
   <h1>Welcome to VNSE MATHEMATICS</h1>
 
-  <p>Number of Visitors:</p>
+  <p>Number of Visitors: <span id="visitor-count">Loading...</span></p>
 
-  <!-- ✅ Visitor Counter Start -->
-  <a href="https://www.hitwebcounter.com" target="_blank">
-    <img src="https://hitwebcounter.com/counter/counter.php?page=YOUR_UNIQUE_ID&style=0006&nbdigits=5&type=page&initCount=0" title="Visitor Counter" Alt="web counter" border="0" />
-  </a>
-  <!-- ✅ Visitor Counter End -->
+  <script>
+    fetch('https://api.countapi.xyz/hit/vnsemathematics/visits')
+      .then(res => res.json())
+      .then(res => {
+        document.getElementById('visitor-count').innerText = res.value;
+      });
+  </script>
 
   <a class="btn" href="https://youtube.com/@vnsemathematics?si=TfHMe2nTCGRvCnBt" target="_blank">▶ Visit Our YouTube Channel</a>
 
