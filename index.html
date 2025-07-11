@@ -1,68 +1,62 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VNSE MATHEMATICS</title>
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VNSE Mathematics</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #f0f0f0, #c0e0ff);
-      color: #333;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #00b09b, #96c93d);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+    }
+
+    .logo {
+      font-size: 40px;
+      background: linear-gradient(to right, #ff9800, #ff5722);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 600;
+    }
+
+    .button {
+      background-color: #ff9800;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    .button:hover {
+      background-color: #e68900;
+      transform: scale(1.05);
+      transition: 0.3s;
+    }
+
+    footer {
+      position: absolute;
+      bottom: 10px;
       text-align: center;
-      padding: 50px 20px;
-    }h1 {
-  font-size: 48px;
-  color: #004aad;
-  margin-bottom: 10px;
-}
-
-p {
-  font-size: 20px;
-  color: #555;
-}
-
-.button {
-  display: inline-block;
-  padding: 15px 30px;
-  font-size: 20px;
-  color: #fff;
-  background: #007bff;
-  border-radius: 8px;
-  text-decoration: none;
-  margin-top: 20px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  transition: background 0.3s ease, transform 0.2s ease;
-}
-
-.button:hover {
-  background: #0056b3;
-  transform: scale(1.05);
-}
-
-nav {
-  background: #fff;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  padding: 10px 0;
-  margin-bottom: 40px;
-}
-
-nav a {
-  margin: 0 15px;
-  text-decoration: none;
-  color: #004aad;
-  font-weight: bold;
-  font-size: 18px;
-}
-
-nav a:hover {
-  color: #007bff;
-}
-
+      color: white;
+      width: 100%;
+      font-size: 14px;
+    }
   </style>
 </head>
+
 <body>
-  <nav>
-    <a href="index.html">Home</a>
-    <a
+  <div class="logo">VNSE MATHEMATICS</div>
+  <button class="button" onclick="window.location.href='https://www.youtube.com'">Go to YouTube</button>
+
+  <footer>© 2025 VNSE MATHEMATICS. All rights reserved.</footer>
+</body>
+</html>
