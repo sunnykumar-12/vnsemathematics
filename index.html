@@ -1,43 +1,206 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VNSE MATHEMATICS</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #f0f0f0;
-            padding-top: 100px;
-        }
-        h1 {
-            font-size: 36px;
-            color: #333;
-        }
-        p {
-            font-size: 18px;
-            color: #555;
-        }
-        button {
-            padding: 12px 25px;
-            font-size: 18px;
-            background-color: #007BFF;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #0056b3;
-        }
-    </style>
-</head>
-<body>
-    <h1>Welcome to VNSE MATHEMATICS</h1>
-    <p>Click the button below to visit our YouTube Channel:</p>
-    <a href="https://youtube.com/@vnsemathematics?si=TfHMe2nTCGRvCnBt" target="_blank">
-        <button>Go to YouTube</button>
-    </a>
-</body>
-</html>
+Microsoft Windows [Version 10.0.26100.3194]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\SUNNY MANDAL>mysql -u root -p
+Enter password: ******
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 13
+Server version: 8.0.41 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2025, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| company            |
+| friend             |
+| information_schema |
+| kumar              |
+| mysql              |
+| performance_schema |
+| rinkesh            |
+| student            |
+| sunny              |
+| suryank            |
+| sys                |
++--------------------+
+11 rows in set (0.00 sec)
+
+mysql> use company;
+Database changed
+mysql> show tables;
++-------------------+
+| Tables_in_company |
++-------------------+
+| employee          |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql> select* from employee;
++-----+--------+-------+----------+------+--------+
+| SNo | fname  | lname | address  | DNo  | salary |
++-----+--------+-------+----------+------+--------+
+|   1 | mohan  | kumar | delhi    |  201 |  10000 |
+|   2 | sohan  | kumar | panjab   |  202 |  12000 |
+|   3 | raja   | sahu  | hariyana |  203 |  14000 |
+|   4 | ramesh | patel | bihar    |  204 |  25000 |
+|   5 | ramu   | yadv  | patna    |  205 |  15000 |
++-----+--------+-------+----------+------+--------+
+5 rows in set (0.00 sec)
+
+Pmysql> select* from employee where SNo=3;
++-----+-------+-------+----------+------+--------+
+| SNo | fname | lname | address  | DNo  | salary |
++-----+-------+-------+----------+------+--------+
+|   3 | raja  | sahu  | hariyana |  203 |  14000 |
++-----+-------+-------+----------+------+--------+
+1 row in set (0.01 sec)
+
+mysql> select* from employee where fname='raja';
++-----+-------+-------+----------+------+--------+
+| SNo | fname | lname | address  | DNo  | salary |
++-----+-------+-------+----------+------+--------+
+|   3 | raja  | sahu  | hariyana |  203 |  14000 |
++-----+-------+-------+----------+------+--------+
+1 row in set (0.00 sec)
+
+mysql> select* from employee order by fname;
++-----+--------+-------+----------+------+--------+
+| SNo | fname  | lname | address  | DNo  | salary |
++-----+--------+-------+----------+------+--------+
+|   1 | mohan  | kumar | delhi    |  201 |  10000 |
+|   3 | raja   | sahu  | hariyana |  203 |  14000 |
+|   4 | ramesh | patel | bihar    |  204 |  25000 |
+|   5 | ramu   | yadv  | patna    |  205 |  15000 |
+|   2 | sohan  | kumar | panjab   |  202 |  12000 |
++-----+--------+-------+----------+------+--------+
+5 rows in set (0.00 sec)
+
+mysql> select distinct lname from employee;
++-------+
+| lname |
++-------+
+| kumar |
+| sahu  |
+| patel |
+| yadv  |
++-------+
+4 rows in set (0.02 sec)
+
+mysql> select distinct fname,address from employee;
++--------+----------+
+| fname  | address  |
++--------+----------+
+| mohan  | delhi    |
+| sohan  | panjab   |
+| raja   | hariyana |
+| ramesh | bihar    |
+| ramu   | patna    |
++--------+----------+
+5 rows in set (0.00 sec)
+
+mysql> select distinct DNo from employee;
++------+
+| DNo  |
++------+
+|  201 |
+|  202 |
+|  203 |
+|  204 |
+|  205 |
++------+
+5 rows in set (0.00 sec)
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| company            |
+| friend             |
+| information_schema |
+| kumar              |
+| mysql              |
+| performance_schema |
+| rinkesh            |
+| student            |
+| sunny              |
+| suryank            |
+| sys                |
++--------------------+
+11 rows in set (0.00 sec)
+
+mysql> use company;
+Database changed
+mysql> create table student(SNo int(10), fname varchar(15), lname varchar(10), address varchar(20), DNo int(10), salary int(10));
+Query OK, 0 rows affected, 3 warnings (0.05 sec)
+
+mysql> desc student;
++---------+-------------+------+-----+---------+-------+
+| Field   | Type        | Null | Key | Default | Extra |
++---------+-------------+------+-----+---------+-------+
+| SNo     | int         | YES  |     | NULL    |       |
+| fname   | varchar(15) | YES  |     | NULL    |       |
+| lname   | varchar(10) | YES  |     | NULL    |       |
+| address | varchar(20) | YES  |     | NULL    |       |
+| DNo     | int         | YES  |     | NULL    |       |
+| salary  | int         | YES  |     | NULL    |       |
++---------+-------------+------+-----+---------+-------+
+6 rows in set (0.00 sec)
+
+mysql> insert into student (SNo,fname,lname) select SNo,fname,lname from employee;
+Query OK, 5 rows affected (0.02 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+mysql> select* from student;
++------+--------+-------+---------+------+--------+
+| SNo  | fname  | lname | address | DNo  | salary |
++------+--------+-------+---------+------+--------+
+|    1 | mohan  | kumar | NULL    | NULL |   NULL |
+|    2 | sohan  | kumar | NULL    | NULL |   NULL |
+|    3 | raja   | sahu  | NULL    | NULL |   NULL |
+|    4 | ramesh | patel | NULL    | NULL |   NULL |
+|    5 | ramu   | yadv  | NULL    | NULL |   NULL |
++------+--------+-------+---------+------+--------+
+5 rows in set (0.00 sec)
+
+mysql> insert into student (SNo, fname) select SNo,fname from employee where SNo=3;
+Query OK, 1 row affected (0.02 sec)
+Records: 1  Duplicates: 0  Warnings: 0
+
+mysql> select* from student;
++------+--------+-------+---------+------+--------+
+| SNo  | fname  | lname | address | DNo  | salary |
++------+--------+-------+---------+------+--------+
+|    1 | mohan  | kumar | NULL    | NULL |   NULL |
+|    2 | sohan  | kumar | NULL    | NULL |   NULL |
+|    3 | raja   | sahu  | NULL    | NULL |   NULL |
+|    4 | ramesh | patel | NULL    | NULL |   NULL |
+|    5 | ramu   | yadv  | NULL    | NULL |   NULL |
+|    3 | raja   | NULL  | NULL    | NULL |   NULL |
++------+--------+-------+---------+------+--------+
+6 rows in set (0.00 sec)
+
+mysql> delete from student where SNo=3;
+Query OK, 2 rows affected (0.02 sec)
+
+mysql> select* from student;
++------+--------+-------+---------+------+--------+
+| SNo  | fname  | lname | address | DNo  | salary |
++------+--------+-------+---------+------+--------+
+|    1 | mohan  | kumar | NULL    | NULL |   NULL |
+|    2 | sohan  | kumar | NULL    | NULL |   NULL |
+|    4 | ramesh | patel | NULL    | NULL |   NULL |
+|    5 | ramu   | yadv  | NULL    | NULL |   NULL |
++------+--------+-------+---------+------+--------+
+4 rows in set (0.00 sec)
+
+mysql> commit;
+Query OK, 0 rows affected (0.00 sec)
+
